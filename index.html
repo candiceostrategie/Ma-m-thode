@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candice Obadia — Bras droit stratégique pour restaurateurs indépendants</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --brown: #42272B;
+  --brown-deep: #2a181b;
+  --violet: #5e17eb;
+  --beige: #ebded4;
+  --beige-light: #f7f2ee;
+  --beige-mid: #d9c9bc;
+  --white: #ffffff;
+  --text-dark: #1a0e10;
+  --text-muted: #7a5f5f;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Syne', sans-serif;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--beige-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── GRAIN ── */
+.grain::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity:0.045;
+  pointer-events:none;
+  z-index:1;
+  mix-blend-mode:overlay;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity:0; transform:translateY(32px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.d1 { transition-delay:0.1s; }
+.d2 { transition-delay:0.2s; }
+.d3 { transition-delay:0.3s; }
+.d4 { transition-delay:0.4s; }
+
+/* ── HERO ── */
+.hero {
+  position:relative;
+  height:100svh;
+  min-height:640px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  overflow:hidden;
+}
+
+.hero-bg {
+  position:absolute;
+  inset:0;
+  background:url('uploads/hero-paris.png') center/cover no-repeat;
+  transform:scale(1.05);
+  transition:transform 8s ease;
+}
+
+.hero-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(26,14,16,0.45) 0%,
+    rgba(26,14,16,0.3) 25%,
+    rgba(26,14,16,0.72) 60%,
+    rgba(26,14,16,0.97) 100%
+  );
+  z-index:1;
+}
+
+.hero-content {
+  position:relative;
+  z-index:2;
+  padding:60px 72px 72px;
+  max-width:1200px;
+}
+
+.hero-eyebrow {
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:28px;
+  display:inline-block;
+  background:rgba(94,23,235,0.18);
+  border:1px solid rgba(94,23,235,0.3);
+  padding:7px 16px;
+  backdrop-filter:blur(4px);
+}
+
+.hero h1 {
+  font-family:var(--serif);
+  font-weight:600;
+  font-style:italic;
+  font-size:clamp(60px, 9vw, 132px);
+  line-height:0.95;
+  color:var(--white);
+  letter-spacing:-0.02em;
+  margin-bottom:40px;
+  max-width:900px;
+}
+
+.hero h1 span {
+  font-style:normal;
+  font-weight:300;
+  color:rgba(235,222,212,0.9);
+  display:block;
+  font-size:0.55em;
+  letter-spacing:0;
+  line-height:1.4;
+  margin-bottom:12px;
+}
+
+.hero-bottom {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:48px;
+}
+
+.hero-body {
+  font-size:15px;
+  font-weight:400;
+  color:rgba(235,222,212,0.82);
+  line-height:1.85;
+  max-width:440px;
+}
+.hero-body strong { color:var(--white); font-weight:600; }
+
+.hero-cta-wrap { flex-shrink:0; text-align:right; }
+
+.cta-primary {
+  display:inline-block;
+  background:var(--violet);
+  color:var(--white);
+  padding:18px 44px;
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:opacity 0.2s;
+}
+.cta-primary:hover { opacity:0.82; }
+
+.hero-sub {
+  margin-top:12px;
+  font-size:10px;
+  color:rgba(235,222,212,0.22);
+  letter-spacing:0.06em;
+  line-height:1.7;
+}
+
+.hero-scroll {
+  position:absolute;
+  bottom:32px;
+  right:72px;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.hero-scroll-line {
+  width:1px;
+  height:48px;
+  background:rgba(235,222,212,0.2);
+  animation:scrollLine 2s ease infinite;
+}
+@keyframes scrollLine {
+  0% { transform:scaleY(0); transform-origin:top; }
+  50% { transform:scaleY(1); transform-origin:top; }
+  51% { transform:scaleY(1); transform-origin:bottom; }
+  100% { transform:scaleY(0); transform-origin:bottom; }
+}
+.hero-scroll-label {
+  font-size:9px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(235,222,212,0.2);
+  writing-mode:vertical-rl;
+}
+
+/* ── MARQUEE ── */
+.marquee-section {
+  background:var(--violet);
+  overflow:hidden;
+  height:56px;
+  display:flex;
+  align-items:center;
+}
+.marquee-track {
+  display:flex;
+  animation:marquee 22s linear infinite;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.marquee-item {
+  display:flex;
+  align-items:center;
+  gap:28px;
+  padding:0 28px;
+  flex-shrink:0;
+}
+.marquee-word {
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:400;
+  font-style:italic;
+  color:rgba(255,255,255,0.9);
+}
+.marquee-dot { width:4px; height:4px; border-radius:50%; background:rgba(255,255,255,0.3); flex-shrink:0; }
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── SECTION BASE ── */
+.section-label {
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--violet);
+  display:block;
+  margin-bottom:20px;
+}
+.section-label-dim { color:rgba(235,222,212,0.35); }
+
+.big-title {
+  font-family:var(--serif);
+  font-weight:600;
+  font-style:italic;
+  line-height:0.95;
+  letter-spacing:-0.02em;
+  color:var(--brown);
+}
+.big-title-light { color:var(--white); }
+.big-title em { font-style:normal; font-weight:300; display:block; }
+
+/* ── CE QU'ON CONSTRUIT ── */
+.projection-section {
+  padding:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:680px;
+}
+
+.projection-text {
+  background:var(--beige-light);
+  padding:100px 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.projection-image {
+  position:relative;
+  overflow:hidden;
+}
+
+.projection-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+.projection-image-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right, rgba(247,242,238,0.4) 0%, transparent 40%);
+}
+
+.projection-title {
+  font-size:clamp(42px,5vw,72px);
+  margin-bottom:32px;
+  margin-top:24px;
+}
+
+.projection-intro {
+  font-size:15px;
+  font-weight:400;
+  line-height:1.85;
+  color:var(--text-muted);
+  margin-bottom:48px;
+  max-width:440px;
+}
+
+.projection-cards {
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+  background:var(--beige-mid);
+}
+
+.proj-card {
+  background:var(--beige-light);
+  padding:24px 0;
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+  border-top:none;
+  transition:background 0.2s;
+}
+.proj-card:hover { background:#f0e9e3; }
+
+.proj-card-num {
+  font-family:var(--serif);
+  font-size:13px;
+  font-weight:300;
+  font-style:italic;
+  color:var(--beige-mid);
+  flex-shrink:0;
+  width:32px;
+  padding-top:2px;
+}
+
+.proj-card-content h3 {
+  font-family:var(--sans);
+  font-size:14px;
+  font-weight:600;
+  color:var(--brown);
+  margin-bottom:6px;
+  letter-spacing:-0.01em;
+}
+
+.proj-card-content p {
+  font-size:13px;
+  font-weight:400;
+  color:var(--text-muted);
+  line-height:1.75;
+}
+
+/* ── APPROCHE ── */
+.approche-section {
+  background:var(--brown);
+  padding:100px 72px;
+  position:relative;
+  overflow:hidden;
+}
+
+.approche-inner {
+  max-width:1080px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:5fr 7fr;
+  gap:100px;
+  align-items:start;
+}
+
+.approche-left-sticky {
+  position:sticky;
+  top:80px;
+}
+
+.approche-title {
+  font-size:clamp(48px,6vw,84px);
+  margin-bottom:48px;
+  margin-top:24px;
+}
+
+.candice-portrait {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:20px 0;
+  border-top:1px solid rgba(235,222,212,0.1);
+  border-bottom:1px solid rgba(235,222,212,0.1);
+}
+
+.candice-portrait-img {
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center top;
+  flex-shrink:0;
+  border:2px solid rgba(235,222,212,0.15);
+}
+
+.candice-name {
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:600;
+  color:var(--beige);
+  letter-spacing:0.02em;
+}
+
+.candice-title {
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:12px;
+  color:rgba(235,222,212,0.45);
+  margin-top:3px;
+}
+
+.approche-body {
+  font-size:15px;
+  font-weight:400;
+  line-height:1.9;
+  color:rgba(235,222,212,0.6);
+  margin-bottom:20px;
+}
+.approche-body strong { color:var(--beige); font-weight:500; }
+
+.approche-levels {
+  margin-top:40px;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.level-item {
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(235,222,212,0.06);
+  padding:24px 28px;
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  transition:background 0.2s;
+}
+.level-item:hover { background:rgba(255,255,255,0.06); }
+.level-arrow { color:var(--violet); font-size:13px; flex-shrink:0; margin-top:3px; }
+.level-item p { font-size:14px; font-weight:400; line-height:1.75; color:rgba(235,222,212,0.55); }
+.level-item p strong { color:var(--beige); font-weight:500; }
+
+.approche-divider { width:36px; height:1px; background:var(--violet); margin:44px 0; opacity:0.5; }
+
+.approche-promise {
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:22px;
+  font-weight:400;
+  color:var(--white);
+  line-height:1.55;
+  max-width:420px;
+}
+
+/* ── PHOTO BREAK ── */
+.photo-break {
+  height:420px;
+  position:relative;
+  overflow:hidden;
+}
+
+.photo-break img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 40%;
+  display:block;
+}
+
+.photo-break-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(26,14,16,0.3) 0%, rgba(26,14,16,0.1) 50%, rgba(26,14,16,0.3) 100%);
+}
+
+.photo-break-caption {
+  position:absolute;
+  bottom:32px;
+  left:72px;
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.35);
+  z-index:2;
+}
+
+/* ── PROCESS ── */
+.process-section {
+  background:var(--beige-light);
+  padding:100px 72px;
+}
+.process-inner { max-width:1080px; margin:0 auto; }
+
+.process-header {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:72px;
+}
+
+.process-title { font-size:clamp(42px,5vw,72px); }
+
+.process-steps { border-top:1px solid var(--beige-mid); }
+
+.step {
+  border-bottom:1px solid var(--beige-mid);
+  display:grid;
+  grid-template-columns:80px 1fr auto;
+  gap:0;
+  align-items:stretch;
+  transition:background 0.2s;
+}
+.step:hover { background:rgba(66,39,43,0.025); }
+
+.step-num-col {
+  padding:36px 0;
+  display:flex;
+  align-items:flex-start;
+}
+
+.step-num {
+  font-family:var(--serif);
+  font-size:48px;
+  font-weight:300;
+  font-style:italic;
+  color:var(--beige-mid);
+  line-height:1;
+  transition:color 0.25s;
+}
+.step:hover .step-num { color:var(--violet); }
+
+.step-content {
+  padding:36px 40px 36px 0;
+  border-left:1px solid var(--beige-mid);
+  padding-left:40px;
+}
+
+.step-content h3 {
+  font-family:var(--sans);
+  font-size:16px;
+  font-weight:700;
+  color:var(--brown);
+  margin-bottom:10px;
+  letter-spacing:-0.01em;
+}
+
+.step-content p {
+  font-size:13px;
+  font-weight:400;
+  line-height:1.9;
+  color:var(--text-muted);
+  max-width:480px;
+}
+
+.step-tag {
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--violet);
+  background:rgba(94,23,235,0.08);
+  padding:5px 12px;
+  display:inline-block;
+  margin-top:16px;
+  font-weight:600;
+}
+
+.step-img {
+  width:220px;
+  flex-shrink:0;
+  overflow:hidden;
+  position:relative;
+}
+
+.step-img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  opacity:0.85;
+}
+
+/* ── COCKPIT ── */
+.cockpit-section {
+  background:var(--brown-deep);
+  padding:100px 72px;
+  position:relative;
+  overflow:hidden;
+}
+.cockpit-inner { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+.cockpit-header {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:60px;
+}
+
+.cockpit-title { font-size:clamp(42px,5vw,72px); }
+
+.cockpit-desc {
+  font-size:15px;
+  font-weight:400;
+  line-height:1.9;
+  color:rgba(235,222,212,0.5);
+}
+.cockpit-desc strong { color:var(--beige); font-weight:500; }
+
+/* Mockup */
+.cockpit-mockup {
+  background:#130a0c;
+  border:1px solid rgba(235,222,212,0.07);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:48px;
+}
+
+.mockup-bar {
+  background:rgba(255,255,255,0.03);
+  border-bottom:1px solid rgba(235,222,212,0.06);
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.md { width:10px; height:10px; border-radius:50%; }
+.md-r { background:rgba(230,80,80,0.35); }
+.md-y { background:rgba(230,185,70,0.35); }
+.md-g { background:rgba(70,210,120,0.35); }
+.mockup-bar-title {
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:0.12em;
+  color:rgba(235,222,212,0.18);
+  margin-left:6px;
+  font-weight:400;
+}
+
+.mockup-body {
+  padding:24px;
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:16px;
+}
+
+.mockup-main { display:flex; flex-direction:column; gap:12px; }
+
+.mockup-metrics {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.mockup-metric {
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(235,222,212,0.07);
+  padding:16px;
+}
+
+.mm-label {
+  font-family:var(--sans);
+  font-size:8px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:rgba(235,222,212,0.25);
+  display:block;
+  margin-bottom:8px;
+  font-weight:500;
+}
+
+.mm-value {
+  font-family:var(--serif);
+  font-size:26px;
+  font-weight:300;
+  color:var(--beige);
+  line-height:1;
+}
+
+.mm-delta {
+  font-family:var(--sans);
+  font-size:9px;
+  color:rgba(94,210,140,0.7);
+  margin-top:5px;
+  display:block;
+  font-weight:500;
+}
+
+.mockup-chart {
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(235,222,212,0.06);
+  padding:16px;
+  height:80px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+}
+
+.mockup-chart-label {
+  position:absolute;
+  top:10px; left:14px;
+  font-family:var(--sans);
+  font-size:8px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(235,222,212,0.18);
+  font-weight:500;
+}
+
+.mbars {
+  display:flex;
+  align-items:flex-end;
+  gap:4px;
+  width:100%;
+  padding-top:22px;
+}
+
+.mbar {
+  flex:1;
+  background:rgba(94,23,235,0.28);
+  border-radius:1px;
+}
+.mbar.hi { background:rgba(94,23,235,0.65); }
+
+.mockup-sidebar {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.mockup-sidebar-card {
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(235,222,212,0.06);
+  padding:14px 16px;
+}
+
+.ms-label {
+  font-family:var(--sans);
+  font-size:8px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:rgba(235,222,212,0.25);
+  display:block;
+  margin-bottom:6px;
+  font-weight:500;
+}
+
+.ms-value {
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:300;
+  color:var(--beige);
+  line-height:1;
+}
+
+.ms-bar-wrap {
+  margin-top:8px;
+  height:3px;
+  background:rgba(255,255,255,0.06);
+  border-radius:2px;
+  overflow:hidden;
+}
+.ms-bar-fill {
+  height:100%;
+  background:var(--violet);
+  border-radius:2px;
+}
+
+.cockpit-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+}
+
+.cockpit-feat {
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(235,222,212,0.06);
+  padding:24px 22px;
+  transition:background 0.2s;
+}
+.cockpit-feat:hover { background:rgba(255,255,255,0.06); }
+
+.cockpit-feat h4 {
+  font-family:var(--sans);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--beige);
+  margin-bottom:8px;
+}
+
+.cockpit-feat p {
+  font-size:12px;
+  font-weight:400;
+  line-height:1.7;
+  color:rgba(235,222,212,0.35);
+}
+
+/* ── TÉMOIGNAGES ── */
+.temoignages-section {
+  background:var(--beige-light);
+  padding:100px 72px;
+}
+.temoignages-inner { max-width:1080px; margin:0 auto; }
+
+.temo-header {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:72px;
+}
+
+.temo-title { font-size:clamp(42px,5vw,72px); }
+
+.temoignage {
+  background:var(--white);
+  margin-bottom:3px;
+  overflow:hidden;
+}
+
+.temo-quote-block {
+  padding:52px 60px 40px;
+  border-bottom:1px solid var(--beige);
+}
+
+.temo-quote-mark {
+  font-family:var(--serif);
+  font-size:120px;
+  font-weight:300;
+  color:var(--beige-mid);
+  line-height:0.6;
+  display:block;
+  margin-bottom:16px;
+}
+
+.temo-quote {
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(20px,2.5vw,28px);
+  font-weight:400;
+  color:var(--brown);
+  line-height:1.5;
+  max-width:640px;
+}
+
+.temo-details-row {
+  padding:28px 60px;
+  font-size:13px;
+  font-weight:400;
+  color:var(--text-muted);
+  line-height:1.85;
+}
+.temo-details-row p { margin-bottom:10px; }
+.temo-details-row p:last-child { margin-bottom:0; }
+
+.temo-footer {
+  padding:24px 60px;
+  background:rgba(247,242,238,0.5);
+  border-top:1px solid var(--beige);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  flex-wrap:wrap;
+}
+
+.temo-author {
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.author-avatar {
+  width:44px; height:44px;
+  border-radius:50%;
+  background:var(--brown);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--serif);
+  font-size:16px;
+  color:var(--beige);
+  flex-shrink:0;
+  overflow:hidden;
+}
+.author-avatar img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.author-name { font-size:14px; font-weight:700; color:var(--brown); letter-spacing:-0.01em; }
+.author-role {
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:0.06em;
+  color:var(--text-muted);
+  margin-top:2px;
+  font-weight:400;
+}
+
+.temo-stats {
+  display:flex;
+  gap:32px;
+  align-items:center;
+}
+
+.stat-block { text-align:right; }
+
+.stat-number {
+  font-family:var(--serif);
+  font-size:40px;
+  font-weight:600;
+  font-style:italic;
+  color:var(--brown);
+  line-height:1;
+  display:block;
+}
+
+.stat-label {
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  display:block;
+  margin-top:4px;
+  font-weight:500;
+}
+
+.temo-tags {
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.temo-tag {
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--violet);
+  background:rgba(94,23,235,0.08);
+  padding:5px 10px;
+  font-weight:600;
+}
+
+/* ── OFFRES ── */
+.offres-section {
+  background:var(--brown);
+  padding:100px 72px;
+  position:relative;
+}
+.offres-inner { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+.offres-header { margin-bottom:64px; }
+.offres-title { font-size:clamp(42px,5vw,72px); margin-top:20px; }
+
+.offres-grid {
+  display:grid;
+  grid-template-columns:1fr 1.1fr 1fr;
+  gap:2px;
+}
+
+.offre-card {
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(235,222,212,0.07);
+  padding:44px 36px;
+  transition:background 0.2s;
+  position:relative;
+}
+.offre-card:hover { background:rgba(255,255,255,0.07); }
+
+.offre-card.featured {
+  background:var(--violet);
+  border-color:var(--violet);
+}
+.offre-card.featured:hover { background:#6e27fb; }
+
+.offre-badge {
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--violet);
+  background:rgba(94,23,235,0.1);
+  padding:5px 12px;
+  display:inline-block;
+  margin-bottom:28px;
+}
+.offre-card.featured .offre-badge { color:rgba(255,255,255,0.7); background:rgba(255,255,255,0.12); }
+
+.offre-title {
+  font-family:var(--serif);
+  font-size:28px;
+  font-weight:400;
+  color:var(--beige);
+  margin-bottom:14px;
+  line-height:1.15;
+}
+.offre-card.featured .offre-title { color:var(--white); }
+
+.offre-desc {
+  font-size:13px;
+  font-weight:400;
+  line-height:1.8;
+  color:rgba(235,222,212,0.4);
+  margin-bottom:32px;
+}
+.offre-card.featured .offre-desc { color:rgba(255,255,255,0.6); }
+
+.offre-divider { height:1px; background:rgba(235,222,212,0.08); margin-bottom:28px; }
+.offre-card.featured .offre-divider { background:rgba(255,255,255,0.15); }
+
+.offre-list { list-style:none; margin-bottom:36px; }
+.offre-list li {
+  font-size:13px;
+  font-weight:400;
+  color:rgba(235,222,212,0.65);
+  padding:9px 0;
+  border-bottom:1px solid rgba(235,222,212,0.06);
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  line-height:1.5;
+}
+.offre-card.featured .offre-list li { color:rgba(255,255,255,0.8); border-bottom-color:rgba(255,255,255,0.1); }
+.offre-list li::before { content:'—'; color:var(--violet); flex-shrink:0; font-size:11px; margin-top:1px; }
+.offre-card.featured .offre-list li::before { color:rgba(255,255,255,0.4); }
+
+.offre-note {
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:0.06em;
+  color:rgba(235,222,212,0.3);
+  margin-bottom:24px;
+  margin-top:-20px;
+  display:block;
+  font-weight:400;
+}
+.offre-card.featured .offre-note { color:rgba(255,255,255,0.4); }
+
+.offre-cta {
+  display:block;
+  text-align:center;
+  padding:15px 24px;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:opacity 0.2s;
+}
+.offre-cta.outline { border:1px solid rgba(235,222,212,0.2); color:var(--beige); }
+.offre-cta.outline:hover { border-color:var(--beige); }
+.offre-cta.filled { background:var(--white); color:var(--violet); }
+.offre-cta.filled:hover { opacity:0.9; }
+
+/* ── NOT FOR YOU ── */
+.notforyou-section {
+  background:var(--brown-deep);
+  padding:100px 72px;
+  overflow:hidden;
+  position:relative;
+}
+.notforyou-inner { max-width:1080px; margin:0 auto; position:relative; z-index:1; }
+
+.notforyou-header { margin-bottom:0; }
+.notforyou-eyebrow { color:rgba(235,222,212,0.35); }
+.notforyou-title {
+  font-size:clamp(52px,7vw,100px);
+  color:var(--white);
+  margin-top:20px;
+  margin-bottom:64px;
+}
+
+.nfy-list { border-top:1px solid rgba(235,222,212,0.07); }
+
+.nfy-row {
+  border-bottom:1px solid rgba(235,222,212,0.07);
+  padding:32px 0;
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:32px;
+  align-items:baseline;
+  transition:background 0.2s;
+  cursor:default;
+}
+.nfy-row:hover { background:rgba(255,255,255,0.02); }
+
+.nfy-index {
+  font-family:var(--serif);
+  font-size:13px;
+  font-weight:300;
+  font-style:italic;
+  color:rgba(235,222,212,0.2);
+  line-height:1;
+}
+
+.nfy-text {
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(22px,3vw,36px);
+  font-weight:300;
+  color:rgba(235,222,212,0.75);
+  line-height:1.2;
+  transition:color 0.2s;
+}
+.nfy-row:hover .nfy-text { color:var(--white); }
+
+/* ── FAQ ── */
+.faq-section {
+  background:var(--beige-light);
+  padding:100px 72px;
+}
+.faq-inner { max-width:1080px; margin:0 auto; }
+
+.faq-header { margin-bottom:72px; }
+.faq-title { font-size:clamp(42px,5vw,72px); margin-top:20px; }
+
+.faq-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  background:var(--beige-mid);
+}
+
+.faq-card {
+  background:var(--white);
+  padding:40px 40px;
+  transition:background 0.2s;
+  cursor:pointer;
+}
+.faq-card:hover { background:#faf6f3; }
+.faq-card.open { background:var(--brown); }
+
+.faq-q {
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(18px,2vw,24px);
+  font-weight:400;
+  color:var(--brown);
+  line-height:1.3;
+  margin-bottom:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+  transition:color 0.2s;
+}
+.faq-card.open .faq-q { color:var(--white); }
+
+.faq-q-icon {
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid var(--beige-mid);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:18px;
+  font-style:normal;
+  color:var(--violet);
+  transition:transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.2s;
+  line-height:1;
+  font-family:var(--sans);
+  margin-top:2px;
+}
+.faq-card.open .faq-q-icon {
+  transform:rotate(45deg);
+  border-color:rgba(235,222,212,0.2);
+  color:var(--beige);
+}
+
+.faq-a {
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.faq-card.open .faq-a { max-height:200px; }
+
+.faq-a p {
+  font-size:14px;
+  font-weight:400;
+  line-height:1.9;
+  color:rgba(235,222,212,0.6);
+  padding-top:20px;
+}
+
+/* ── FINAL CTA ── */
+.final-cta-section {
+  position:relative;
+  min-height:600px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  padding:120px 72px;
+}
+
+.final-cta-bg {
+  position:absolute;
+  inset:0;
+  background:url('uploads/restaurant.png') center/cover no-repeat;
+}
+
+.final-cta-overlay {
+  position:absolute;
+  inset:0;
+  background:rgba(26,14,16,0.88);
+}
+
+.final-cta-inner {
+  position:relative;
+  z-index:2;
+  max-width:700px;
+}
+
+.final-cta-inner h2 {
+  font-family:var(--serif);
+  font-weight:600;
+  font-style:italic;
+  font-size:clamp(48px,7vw,100px);
+  line-height:0.95;
+  color:var(--white);
+  letter-spacing:-0.02em;
+  margin-bottom:36px;
+}
+
+.final-cta-inner h2 em {
+  font-style:normal;
+  font-weight:300;
+  color:rgba(235,222,212,0.6);
+}
+
+.final-cta-inner > p {
+  font-size:15px;
+  font-weight:400;
+  line-height:1.85;
+  color:rgba(235,222,212,0.45);
+  margin-bottom:52px;
+}
+
+.final-cta-note {
+  margin-top:20px;
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:rgba(235,222,212,0.2);
+  line-height:1.75;
+  font-weight:400;
+}
+
+/* ── FOOTER ── */
+footer {
+  background:#100608;
+  padding:32px 72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+footer p {
+  font-family:var(--sans);
+  font-size:10px;
+  color:rgba(235,222,212,0.15);
+  letter-spacing:0.1em;
+  font-weight:400;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width:1024px) {
+  .hero-content { padding:48px 40px 56px; }
+  .hero-scroll { right:40px; }
+  .approche-inner { grid-template-columns:1fr; gap:60px; }
+  .approche-left-sticky { position:static; }
+  .cockpit-header, .process-header, .temo-header, .faq-header { grid-template-columns:1fr; gap:24px; }
+  .projection-section { grid-template-columns:1fr; }
+  .projection-image { height:320px; }
+  .projection-text { padding:72px 40px; }
+  .approche-section { padding:80px 40px; }
+  .cockpit-section, .temoignages-section, .offres-section, .notforyou-section, .faq-section { padding:80px 40px; }
+  .final-cta-section { padding:100px 40px; }
+  .offres-grid { grid-template-columns:1fr; }
+  .cockpit-grid { grid-template-columns:1fr 1fr; }
+  .step { grid-template-columns:72px 1fr; }
+  .step-img { display:none; }
+  .photo-break-caption { left:40px; }
+  footer { padding:28px 40px; flex-direction:column; gap:8px; align-items:flex-start; }
+}
+
+@media (max-width:640px) {
+  .hero h1 { font-size:clamp(52px,14vw,80px); }
+  .hero-bottom { flex-direction:column; align-items:flex-start; gap:28px; }
+  .hero-cta-wrap { text-align:left; }
+  .notforyou-grid { grid-template-columns:1fr; }
+  .temo-footer { flex-direction:column; align-items:flex-start; }
+  .temo-stats { justify-content:flex-start; }
+  .stat-block { text-align:left; }
+  .temo-quote-block, .temo-footer, .temo-details-row { padding-left:32px; padding-right:32px; }
+  .cockpit-grid { grid-template-columns:1fr; }
+  .mockup-body { grid-template-columns:1fr; }
+  .mockup-sidebar { display:none; }
+  .mockup-metrics { grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow">Candice Obadia · Stratégie &amp; Opérations restaurant</span>
+    <h1>
+      <span>Tu développes ton restaurant.</span>
+      Ou ton groupe.
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-body">
+        À un certain niveau, la croissance ne se joue plus sur l'exécution.<br>
+        <strong>Elle se joue sur la structure.</strong><br><br>
+        Je t'aide à structurer, piloter et développer — sans désorganisation ni perte de contrôle.
+      </p>
+      <div class="hero-cta-wrap">
+        <a href="https://calendly.com/candiceo-strategie/decouverte" target="_blank" class="cta-primary">
+          Réserver un appel stratégique
+        </a>
+        <p class="hero-sub">30 minutes · Sans engagement · Pour voir si c'est pertinent pour ton niveau de développement</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-item"><span class="marquee-word">Structurer</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Piloter</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Développer</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Décider</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Structurer</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Piloter</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Développer</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Décider</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Structurer</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Piloter</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Développer</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span class="marquee-word">Décider</span><div class="marquee-dot"></div></div>
+  </div>
+</div>
+
+<!-- CE QU'ON CONSTRUIT -->
+<section class="projection-section">
+  <div class="projection-text">
+    <div>
+      <span class="section-label reveal">Ce qu'on construit ensemble</span>
+      <h2 class="big-title projection-title reveal d1">Que tu sois à la tête<br>d'un restaurant<br>ou d'un groupe<br><em>en développement </em></h2>
+      <p class="projection-intro reveal d2">Le point commun reste le même : la structure ne suit plus toujours la croissance.</p>
+    </div>
+    <div class="projection-cards reveal d3">
+      <div class="proj-card">
+        <span class="proj-card-num">01</span>
+        <div class="proj-card-content">
+          <h3>Ta croissance devient difficile à structurer</h3>
+          <p>On remet de la clarté pour que ton développement reste maîtrisé.</p>
+        </div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-card-num">02</span>
+        <div class="proj-card-content">
+          <h3>Tes établissements ne tournent pas toujours ensemble</h3>
+          <p>On structure une vision globale : chiffres, organisation, pilotage.</p>
+        </div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-card-num">03</span>
+        <div class="proj-card-content">
+          <h3>Tes chiffres existent, mais la lecture est partielle</h3>
+          <p>On met en place un système de pilotage simple et lisible.</p>
+        </div>
+      </div>
+      <div class="proj-card">
+        <span class="proj-card-num">04</span>
+        <div class="proj-card-content">
+          <h3>Tu portes encore trop de décisions seul</h3>
+          <p>Tu as un bras droit pour structurer, arbitrer et avancer sans être partout.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="projection-image reveal">
+    <img src="uploads/consultation-cafe.png" alt="Consultation stratégique">
+    <div class="projection-image-overlay"></div>
+  </div>
+</section>
+
+<!-- MON APPROCHE -->
+<section class="approche-section grain" style="position:relative;">
+  <div class="approche-inner">
+    <div class="approche-left-sticky">
+      <span class="section-label section-label-dim reveal">Mon approche</span>
+      <h2 class="big-title big-title-light approche-title reveal d1">Pas une<br>consultante<br>externe<br><em>Un bras droit<br>opérationnel</em></h2>
+      <div class="candice-portrait reveal d2">
+        <img src="uploads/candice-portrait.jpg" alt="Candice Obadia" class="candice-portrait-img">
+        <div>
+          <div class="candice-name">Candice Obadia</div>
+          <div class="candice-title">Stratégie & Opérations restaurant</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="approche-body reveal">J'interviens à 3 niveaux, parce qu'on ne structure pas un restaurant depuis un ordinateur, et on ne pilote pas uniquement sur le terrain.</p>
+
+      <div class="approche-levels reveal d1">
+        <div class="level-item">
+          <span class="level-arrow">→</span>
+          <p><strong>Sur le terrain</strong> : pour comprendre la réalité de ton organisation, pas juste ce qu'elle devrait être sur le papier.</p>
+        </div>
+        <div class="level-item">
+          <span class="level-arrow">→</span>
+          <p><strong>À distance</strong> : pour structurer, piloter et accompagner les décisions dans la durée.</p>
+        </div>
+        <div class="level-item">
+          <span class="level-arrow">→</span>
+          <p><strong>En continu, via le Cockpit</strong> : le système qui relie tout et te donne une vision claire à tout moment.</p>
+        </div>
+      </div>
+
+      <div class="approche-divider reveal d2"></div>
+      <p class="approche-promise reveal d2">"Mon travail, c'est de construire la structure qui te permet de piloter ton restaurant et de passer au cap d'après."</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK — terrain -->
+<div class="photo-break">
+  <img src="uploads/candice-terrain.png" alt="Sur le terrain">
+  <div class="photo-break-overlay"></div>
+  <span class="photo-break-caption">Sur le terrain — avec les équipes, dans le réel</span>
+</div>
+
+<!-- COMMENT ON TRAVAILLE -->
+<section class="process-section">
+  <div class="process-inner">
+    <div class="process-header">
+      <div>
+        <span class="section-label reveal">Comment on travaille</span>
+        <h2 class="big-title process-title reveal d1">Quatre étapes.<br><em>Du diagnostic<br>au pilotage.</em></h2>
+      </div>
+      <p class="reveal d2" style="font-size:15px;font-weight:400;line-height:1.9;color:var(--text-muted);">Une méthode concrète, mise en place pas à pas, terrain et distance mêlés.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num-col"><div class="step-num">01</div></div>
+        <div class="step-content">
+          <h3>Appel découverte</h3>
+          <p>On fait le point sur ta situation, ton niveau de structuration et tes objectifs. 30 minutes pour voir si c'est pertinent pour toi, je ne vends rien avant de savoir si je peux vraiment t'aider.</p>
+          <span class="step-tag">Gratuit · Sans engagement</span>
+        </div>
+        <div class="step-img">
+          <img src="uploads/handshake.png" alt="Rencontre">
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num-col"><div class="step-num">02</div></div>
+        <div class="step-content">
+          <h3>Analyse terrain + système</h3>
+          <p>Je rentre dans ton organisation : terrain ou distance selon ton profil. Je comprends comment ton système fonctionne réellement, pas comment il devrait fonctionner.</p>
+          <span class="step-tag">Terrain &amp; visio</span>
+        </div>
+        <div class="step-img">
+          <img src="uploads/analyse.png" alt="Analyse">
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num-col"><div class="step-num">03</div></div>
+        <div class="step-content">
+          <h3>Structuration</h3>
+          <p>On met en place les outils, les décisions et les ajustements nécessaires. Pas de rapport qui dort dans un dossier. Du concret, mis en place, suivi dans le temps.</p>
+          <span class="step-tag">Action &amp; mise en œuvre</span>
+        </div>
+        <div class="step-img">
+          <img src="uploads/audit.png" alt="Structuration">
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num-col"><div class="step-num">04</div></div>
+        <div class="step-content">
+          <h3>Pilotage continu</h3>
+          <p>On travaille en visio et via le Cockpit pour maintenir la dynamique de décision. Tu as une vision en temps réel, et quelqu'un dans ton coin pour les arbitrages.</p>
+          <span class="step-tag">Cockpit · Visio · Disponibilité</span>
+        </div>
+        <div class="step-img">
+          <img src="uploads/visio.png" alt="Pilotage continu">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COCKPIT -->
+<section class="cockpit-section grain" style="position:relative;">
+  <div class="cockpit-inner">
+    <div class="cockpit-header">
+      <div>
+        <span class="section-label section-label-dim reveal">Le Cockpit : base du pilotage</span>
+        <h2 class="big-title big-title-light cockpit-title reveal d1">Aujourd'hui,<br>tu pilotes à l'instinct.<br><em>Demain, avec<br>une vision claire.</em></h2>
+      </div>
+      <div class="reveal d2">
+        <p class="cockpit-desc">Un outil de pilotage conçu pour la restauration indépendante. Simple, centralisé, taillé pour ton quotidien.<br><br><strong>Tout centralisé. Lisible. Exploitable.</strong> Connecté à tes outils existants pour une vue d'ensemble réelle.</p>
+      </div>
+    </div>
+
+    <div class="cockpit-mockup reveal">
+      <div class="mockup-bar">
+        <div class="md md-r"></div>
+        <div class="md md-y"></div>
+        <div class="md md-g"></div>
+        <span class="mockup-bar-title">Cockpit — Vue d'ensemble · Avril 2025</span>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-main">
+          <div class="mockup-metrics">
+            <div class="mockup-metric">
+              <span class="mm-label">CA ce mois</span>
+              <div class="mm-value">38 420€</div>
+              <span class="mm-delta">↑ +12% vs N-1</span>
+            </div>
+            <div class="mockup-metric">
+              <span class="mm-label">Ticket moyen</span>
+              <div class="mm-value">42€</div>
+              <span class="mm-delta">↑ +10€ vs démarrage</span>
+            </div>
+            <div class="mockup-metric">
+              <span class="mm-label">Food cost</span>
+              <div class="mm-value">27.4%</div>
+              <span class="mm-delta">↓ −3.2 pts</span>
+            </div>
+            <div class="mockup-metric">
+              <span class="mm-label">Masse salariale</span>
+              <div class="mm-value">31.8%</div>
+              <span class="mm-delta">— stable</span>
+            </div>
+            <div class="mockup-metric">
+              <span class="mm-label">Couverts / jour</span>
+              <div class="mm-value">124</div>
+              <span class="mm-delta">↑ +18 vs S-4</span>
+            </div>
+            <div class="mockup-metric">
+              <span class="mm-label">Marge brute</span>
+              <div class="mm-value">68.2%</div>
+              <span class="mm-delta">↑ objectif atteint</span>
+            </div>
+          </div>
+          <div class="mockup-chart">
+            <span class="mockup-chart-label">CA par service — 30 derniers jours</span>
+            <div class="mbars">
+              <div class="mbar" style="height:55%"></div>
+              <div class="mbar" style="height:70%"></div>
+              <div class="mbar" style="height:48%"></div>
+              <div class="mbar hi" style="height:85%"></div>
+              <div class="mbar" style="height:65%"></div>
+              <div class="mbar" style="height:72%"></div>
+              <div class="mbar hi" style="height:90%"></div>
+              <div class="mbar" style="height:60%"></div>
+              <div class="mbar" style="height:75%"></div>
+              <div class="mbar" style="height:58%"></div>
+              <div class="mbar hi" style="height:88%"></div>
+              <div class="mbar" style="height:68%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-sidebar">
+          <div class="mockup-sidebar-card">
+            <span class="ms-label">Objectif CA</span>
+            <div class="ms-value">87%</div>
+            <div class="ms-bar-wrap"><div class="ms-bar-fill" style="width:87%"></div></div>
+          </div>
+          <div class="mockup-sidebar-card">
+            <span class="ms-label">Actions en cours</span>
+            <div class="ms-value">4 / 6</div>
+            <div class="ms-bar-wrap"><div class="ms-bar-fill" style="width:66%"></div></div>
+          </div>
+          <div class="mockup-sidebar-card">
+            <span class="ms-label">Prochain point</span>
+            <div class="ms-value" style="font-size:16px">Vendredi 16h</div>
+          </div>
+          <div class="mockup-sidebar-card">
+            <span class="ms-label">L'Indépendant</span>
+            <div class="ms-value" style="font-size:16px;color:rgba(94,210,140,0.8)">Actif</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cockpit-grid reveal">
+      <div class="cockpit-feat"><h4>Chiffres</h4><p>CA par service, ticket moyen, performance réelle par adresse.</p></div>
+      <div class="cockpit-feat"><h4>Équipe</h4><p>Planning, masse salariale, organisation et coût réel par service.</p></div>
+      <div class="cockpit-feat"><h4>Pilotage</h4><p>Objectifs, indicateurs, actions en cours. Tu sais où tu en es.</p></div>
+      <div class="cockpit-feat"><h4>Agenda</h4><p>CA jour par jour, événements, temps forts. Tout au même endroit.</p></div>
+      <div class="cockpit-feat"><h4>Communication</h4><p>Stratégie réseaux sociaux, suivi des actions, cohérence de ta com.</p></div>
+      <div class="cockpit-feat"><h4>Process</h4><p>Tes procédures internes, tes standards, ce qui fait tourner sans toi.</p></div>
+      <div class="cockpit-feat"><h4>Sessions &amp; suivi</h4><p>Accès à nos échanges, décisions prises, actions en cours.</p></div>
+      <div class="cockpit-feat"><h4>Intégrations</h4><p>Connexion avec tes outils : caisse, logiciels métier.... vue unifiée.</p></div>
+      <div class="cockpit-feat"><h4>L'Indépendant</h4><p>Communauté de restaurateurs et réseau d'experts sélectionnés.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="temoignages-section">
+  <div class="temoignages-inner">
+    <div class="temo-header">
+      <div>
+        <span class="section-label reveal">Ce qu'ils disent</span>
+        <h2 class="big-title temo-title reveal d1">Des restaurants.<br><em>Des transformations réelles.</em></h2>
+      </div>
+    </div>
+
+    <div class="temoignage reveal">
+      <div class="temo-quote-block">
+        <span class="temo-quote-mark">"</span>
+        <p class="temo-quote">J'ai une base solide pour développer. Je suis en train de construire un deuxième établissement, avec une vision beaucoup plus claire.</p>
+      </div>
+      <div class="temo-details-row">
+        <p>Avant de travailler avec Candice, on avait une carte très large, difficile à gérer au quotidien. Beaucoup de références, peu de lisibilité, et une rentabilité qu'on ne maîtrisait pas vraiment.</p>
+        <p>On a tout retravaillé ensemble : l'offre, la structure de la carte, et la logique derrière. On a simplifié, clarifié, et surtout pris des décisions concrètes.</p>
+      </div>
+      <div class="temo-footer">
+        <div class="temo-author">
+          <div class="author-avatar"><span>M</span></div>
+          <div>
+            <div class="author-name">Maïna</div>
+            <div class="author-role">Restaurant caribéen — Villeurbanne</div>
+          </div>
+        </div>
+        <div class="temo-stats">
+          <div class="stat-block">
+            <span class="stat-number">+3 000€</span>
+            <span class="stat-label">CA mensuel</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-number">×2</span>
+            <span class="stat-label">Établissements</span>
+          </div>
+        </div>
+        <div class="temo-tags">
+          <span class="temo-tag">Menu Engineering</span>
+          <span class="temo-tag">Structuration</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="temoignage reveal">
+      <div class="temo-quote-block">
+        <span class="temo-quote-mark">"</span>
+        <p class="temo-quote">On prend des décisions beaucoup plus rapidement, avec une vision claire de l'impact.</p>
+      </div>
+      <div class="temo-details-row">
+        <p>On savait qu'il y avait un sujet sur nos chiffres, mais on n'arrivait pas à identifier précisément où agir.</p>
+        <p>Candice est rentrée dans le détail avec nous : offre, pricing, organisation. Pas juste des recommandations, on a travaillé concrètement sur les décisions. Résultat : +10€ de ticket moyen. Mais surtout, une vraie lecture de notre rentabilité.</p>
+      </div>
+      <div class="temo-footer">
+        <div class="temo-author">
+          <div class="author-avatar"><span>LR</span></div>
+          <div>
+            <div class="author-name">Léa &amp; Romain</div>
+            <div class="author-role">Bistronomique</div>
+          </div>
+        </div>
+        <div class="temo-stats">
+          <div class="stat-block">
+            <span class="stat-number">+10€</span>
+            <span class="stat-label">Ticket moyen</span>
+          </div>
+        </div>
+        <div class="temo-tags">
+          <span class="temo-tag">Pilotage</span>
+          <span class="temo-tag">Pricing</span>
+          <span class="temo-tag">Rentabilité</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="temoignage reveal">
+      <div class="temo-quote-block">
+        <span class="temo-quote-mark">"</span>
+        <p class="temo-quote">Elle n'est pas juste un regard extérieur. Elle est dedans avec nous. 
+Et ça change complètement la manière dont on avance.</p>
+      </div>
+      <div class="temo-details-row">
+        <p>On avait besoin de quelqu'un qui ne reste pas en surface. Quelqu'un qui comprenne vraiment comment ça tourne chez nous.</p>
+        <p>Candice est venue plusieurs jours sur le terrain, avec l'équipe, dans le réel. Elle a structuré des choses très concrètes dans notre organisation, qu'on n'aurait pas mises en place seuls.</p>
+      </div>
+      <div class="temo-footer">
+        <div class="temo-author">
+          <div class="author-avatar"><span>A</span></div>
+          <div>
+            <div class="author-name">Agnès</div>
+            <div class="author-role">La Cantine</div>
+          </div>
+        </div>
+        <div class="temo-tags">
+          <span class="temo-tag">Immersion terrain</span>
+          <span class="temo-tag">Structuration opérationnelle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRES -->
+<section class="offres-section grain" style="position:relative;">
+  <div class="offres-inner">
+    <div class="offres-header">
+      <span class="section-label section-label-dim reveal">Comment travailler ensemble</span>
+      <h2 class="big-title big-title-light offres-title reveal d1">Une formule<br><em>pour chaque étape.</em></h2>
+    </div>
+
+    <div class="offres-grid">
+      <div class="offre-card reveal">
+        <span class="offre-badge">Structuration</span>
+        <h3 class="offre-title">Cockpit &amp; Mise en place</h3>
+        <p class="offre-desc">Pour poser les bases du pilotage et repartir avec un système clair.</p>
+        <div class="offre-divider"></div>
+        <ul class="offre-list">
+          <li>Mise en place du Cockpit</li>
+          <li>Structuration des indicateurs clés</li>
+          <li>2 sessions de visio</li>
+          <li>Suivi initial</li>
+        </ul>
+        <a href="https://calendly.com/candiceo-strategie/decouverte" class="offre-cta outline" target="_blank">En discuter</a>
+      </div>
+
+      <div class="offre-card featured reveal d1">
+        <span class="offre-badge">Le plus choisi</span>
+        <h3 class="offre-title">Bras Droit Opérationnel</h3>
+        <p class="offre-desc">Pour structurer et piloter dans la durée — terrain et stratégie mêlés.</p>
+        <div class="offre-divider"></div>
+        <ul class="offre-list">
+          <li>Terrain + distance</li>
+          <li>Cockpit complet inclus</li>
+          <li>Pilotage régulier</li>
+          <li>Structuration organisation &amp; équipe</li>
+          <li>Accompagnement des décisions stratégiques</li>
+          <li>Disponibilité entre les sessions</li>
+        </ul>
+        <span class="offre-note">Engagement minimum : 6 mois</span>
+        <a href="https://calendly.com/candiceo-strategie/decouverte" class="offre-cta filled" target="_blank">Prendre un appel</a>
+      </div>
+
+      <div class="offre-card reveal d2">
+        <span class="offre-badge">Mission ciblée</span>
+        <h3 class="offre-title">Intervention Terrain</h3>
+        <p class="offre-desc">Pour débloquer un sujet précis, rapidement et concrètement.</p>
+        <div class="offre-divider"></div>
+        <ul class="offre-list">
+          <li>Offre / carte</li>
+          <li>Organisation interne</li>
+          <li>Ouverture d'établissement</li>
+          <li>Rentabilité</li>
+          <li>Problème opérationnel ciblé</li>
+        </ul>
+        <a href="https://calendly.com/candiceo-strategie/decouverte" class="offre-cta outline" target="_blank">En discuter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CE N'EST PAS POUR TOI -->
+<section class="notforyou-section grain">
+  <div class="notforyou-inner">
+    <div class="notforyou-header">
+      <span class="section-label notforyou-eyebrow reveal">Soyons clairs</span>
+      <h2 class="big-title big-title-light notforyou-title reveal d1">Ce n'est pas<br><em>pour toi si </em></h2>
+    </div>
+    <div class="nfy-list">
+      <div class="nfy-row reveal">
+        <span class="nfy-index">01</span>
+        <p class="nfy-text">Tu veux uniquement des conseils rapides, sans t'impliquer dans la durée.</p>
+      </div>
+      <div class="nfy-row reveal d1">
+        <span class="nfy-index">02</span>
+        <p class="nfy-text">Tu ne veux pas regarder tes chiffres en face.</p>
+      </div>
+      <div class="nfy-row reveal d2">
+        <span class="nfy-index">03</span>
+        <p class="nfy-text">Tu refuses de structurer ton organisation.</p>
+      </div>
+      <div class="nfy-row reveal d3">
+        <span class="nfy-index">04</span>
+        <p class="nfy-text">Tu cherches des résultats sans y mettre de l'implication de ton côté.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="section-label reveal">Questions fréquentes</span>
+      <h2 class="big-title faq-title reveal d1">Ce qu'on me<br><em>demande souvent.</em></h2>
+    </div>
+
+    <div class="faq-grid reveal">
+      <div class="faq-card" onclick="toggleFaqCard(this)">
+        <div class="faq-q"><span>Est-ce adapté si j'ai un seul restaurant ?</span><span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><p>Oui. Le sujet reste le même : structurer pour mieux piloter, et se donner les bases pour aller plus loin.</p></div>
+      </div>
+      <div class="faq-card" onclick="toggleFaqCard(this)">
+        <div class="faq-q"><span>Et si j'ai plusieurs établissements ?</span><span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><p>C'est souvent là que j'interviens — pour remettre une vision globale, de la cohérence, et un pilotage qui tient à l'échelle.</p></div>
+      </div>
+      <div class="faq-card" onclick="toggleFaqCard(this)">
+        <div class="faq-q"><span>Tu travailles à distance ou en présentiel ?</span><span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><p>Les deux. Le terrain fait partie de ma façon de comprendre ton organisation. Le travail à distance — visio, Cockpit — assure la continuité entre les sessions.</p></div>
+      </div>
+      <div class="faq-card" onclick="toggleFaqCard(this)">
+        <div class="faq-q"><span>Combien de clients tu prends en même temps ?</span><span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><p>Peu. Je limite volontairement le nombre pour garantir un vrai niveau d'implication — pas un accompagnement en mode abonnement automatique.</p></div>
+      </div>
+      <div class="faq-card" onclick="toggleFaqCard(this)">
+        <div class="faq-q"><span>Est-ce que je dois être très disponible ?</span><span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><p>Un minimum, oui. On construit ensemble dans le réel — ça demande de l'implication des deux côtés.</p></div>
+      </div>
+      <div class="faq-card" onclick="toggleFaqCard(this)">
+        <div class="faq-q"><span>Comment savoir si c'est fait pour moi ?</span><span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><p>C'est exactement pour ça que l'appel découverte existe. 30 minutes pour en parler, sans engagement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta-section">
+  <div class="final-cta-bg"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="final-cta-inner">
+    <h2 class="reveal">Tu peux continuer<br>comme aujourd'hui.<br><em>Ou structurer pour<br>passer un vrai cap.</em></h2>
+    <p class="reveal d1">Un appel de 30 minutes pour voir où tu en es<br>et ce qu'on peut construire ensemble.</p>
+    <a href="https://calendly.com/candiceo-strategie/decouverte" target="_blank" class="cta-primary reveal d2">
+      Réserver un appel stratégique
+    </a>
+    <p class="final-cta-note reveal d3">Je travaille avec un nombre limité de restaurateurs pour garantir un vrai niveau d'implication.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Candice Obadia · Stratégie &amp; Opérations restaurant · Signature Resto &copy; 2025</p>
+  <p>Tous droits réservés</p>
+</footer>
+
+<script>
+  function toggleFaqCard(card) {
+    const isOpen = card.classList.contains('open');
+    document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('open'));
+    if (!isOpen) card.classList.add('open');
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06, rootMargin:'0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Hero parallax
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      heroBg.style.transform = `scale(1.05) translateY(${y * 0.18}px)`;
+    }, { passive: true });
+    setTimeout(() => { heroBg.style.transform = 'scale(1)'; }, 100);
+  }
+</script>
+
+</body>
+</html>
